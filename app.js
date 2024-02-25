@@ -1,17 +1,12 @@
 require("dotenv").config({path: "./.env"})
 const express = require("express");
 const app = express();
-const cors = require("cors")
 
 
 
 //-------------------DEMO-------------------
-const corsOptions = {
-    origin: 'http://localhost:5173',
-    credentials: true,
-  };
-  
-  app.use(cors(corsOptions));
+const cors = require("cors");
+app.use(cors({ credentials: true, origin: true }));
   
   
 //-------------------DEMO-------------------
